@@ -1,7 +1,144 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+:root{
+    --borlor:rgb(49, 61, 69);
 }
 body{
-    background-color: ;
+    background-color: black;
+}
+.left{
+    height: 100%;
+    width: 30%;
+    background-color: rgb(32, 44, 51);
+    position: absolute;
+    border-right: var(--borlor) 1px solid;
+}
+.left .up{
+    height: 8.7%;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.199); */
+    position: absolute;
+}
+.left .up .ppl{
+    height: 41px;
+    width: 41px;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.left .up .ppl img{
+    height: 41px;
+}
+.left .up p{
+    width: fit-content;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: rgb(174, 186, 188);
+    font-size: 11px;
+    font-weight: 500;
+}
+.left .up .status{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 67%;
+}
+.left .up .chat{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 49%;
+    left: 79%;
+}
+.left .up .opt{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 48%;
+    left: 91%;
+}
+.left .down{
+    height: 91.3%;
+    width: 100%;
+    background-color: rgb(17, 27, 33);
+    bottom: 0;
+    position: absolute;
+}
+.left .down .search{
+    height: 8%;
+    width: 100%;
+    border-bottom:var(--borlor) 1px solid ;
+}
+
+
+
+
+.right{
+    height: 100%;
+    width: 70%;
+    background-color: rgb(34, 46, 53);
+    position: absolute;
+    right: 0;
+}
+.right::after{
+    height: 6px;
+    width: 100%;
+    background-color: rgb(23, 138, 119);
+    position: absolute;
+    content: '';
+    bottom: 0;
+}
+.right .nochat{
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 38%;
+    left: 50%;
+}
+.right h1{
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: fit-content;
+    top: 62.5%;
+    left: 47%;
+    color: rgb(208, 213, 215);
+    font-weight: 100;
+}
+.right .font{
+    border-radius: 15px;
+    background-color: rgb(54, 65, 71);
+    font-size: 11px;
+    padding: 5px;
+    color: rgb(192, 207, 176);
+    transform: translate(-50%,-50%);
+    top: 63%;
+    left: 62%;
+    position: absolute;
+    width: fit-content;
+}
+.right p{
+    text-align: center;
+    font-size: 14.5px;
+    position: relative;
+    top: 68%;
+    padding: 2px;
+    color: rgb(133, 158, 173);
+}
+.right h6{
+    width: fit-content;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 93%;
+    left: 50%;
+    color: rgb(133, 158, 173);
+    font-size: 14px;
+    font-weight: 200;
+}
+.right h6 img{
+    transform: translateY(10px);
 }
