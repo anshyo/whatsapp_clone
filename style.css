@@ -5,11 +5,23 @@
 
 }
 :root{
-    --borlor:rgb(49, 61, 69);
+    --borlor:rgb(41, 52, 59);
 }
 body{
     background-color: black;
 }
+
+
+
+.loading-s{
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+
+
 .left{
     height: 100%;
     width: 30%;
@@ -50,18 +62,48 @@ body{
     transform: translate(-50%,-50%);
     top: 50%;
     left: 67%;
+    border-radius: 50%;
+    /* background-color: white; */
+    height: 30px;
+    width: 30px;
+}
+.left .up .status .statu{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
 }
 .left .up .chat{
     position: absolute;
     transform: translate(-50%,-50%);
     top: 49%;
     left: 79%;
+    border-radius: 50%;
+    /* background-color: white; */
+    height: 30px;
+    width: 30px;
+}
+.left .up .chat .cha{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
 }
 .left .up .opt{
     position: absolute;
     transform: translate(-50%,-50%);
     top: 48%;
     left: 91%;
+    border-radius: 50%;
+    /* background-color: white; */
+    height: 30px;
+    width: 30px;
+}
+.left .up .opt .op{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
 }
 .left .down{
     height: 91.3%;
@@ -74,7 +116,60 @@ body{
     height: 8%;
     width: 100%;
     border-bottom:var(--borlor) 1px solid ;
+    position: absolute;
 }
+.left .down .search .warea{
+    height: 72%;
+    width: 93%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: rgb(32, 44, 51);
+    border-radius: 9px;
+}
+.left .down .chats{
+    height: 92%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.219); */
+    position: absolute;
+    bottom: 0;
+}
+.left .down .chats .archive{
+    height: 8.7%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.left .down .chats .archive .bot{
+    border-bottom: var(--borlor) 1px solid;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+}
+.left .down .chats .chat {
+    height: 12%;
+    width: 100%;
+    position: absolute;
+    /* background-color: violet; */
+    top: 8.7%;
+}
+.left .down .chats .chat-1{
+    margin-top: 12%;
+    top: calc(var(--i)*12%);
+}
+.left .down .chats .chat .bot{
+    height: 100%;
+    width: 80%;
+    border-bottom: var(--borlor) 1PX solid;
+    right: 0;
+    position: absolute; 
+}
+
+
+
+
 
 
 
@@ -133,12 +228,9 @@ body{
     width: fit-content;
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 93%;
+    top: 92%;
     left: 50%;
-    color: rgb(133, 158, 173);
+    color: rgb(94, 118, 133);
     font-size: 14px;
-    font-weight: 200;
-}
-.right h6 img{
-    transform: translateY(10px);
+    font-weight: 100;
 }
