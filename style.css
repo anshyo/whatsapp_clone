@@ -6,9 +6,11 @@
 }
 :root{
     --borlor:rgb(41, 52, 59);
+    --seprate:var(--borlor) 1px solid;
 }
 body{
     background-color: black;
+    /* transform-style: preserve-3d; */
 }
 
 
@@ -18,7 +20,8 @@ body{
     width: 30%;
     background-color: rgb(32, 44, 51);
     position: absolute;
-    border-right: var(--borlor) 1px solid;
+    border-right: var(--seprate);
+    transform-style: preserve-3d;
 }
 .left .up{
     height: 8.7%;
@@ -106,7 +109,7 @@ body{
 .left .down .search{
     height: 8%;
     width: 100%;
-    border-bottom:var(--borlor) 1px solid ;
+    border-bottom:var(--seprate) ;
     position: absolute;
 }
 .left .down .search .warea{
@@ -126,41 +129,221 @@ body{
     position: absolute;
     bottom: 0;
 }
-.left .down .chats .archive{
-    height: 8.7%;
+.left .down .chats .arc{
+    height: 49px;
     width: 100%;
+    /* background-color: rgba(0,0,0,0.4); */
     position: absolute;
+}
+.left .down .chats .arc .img{
+    height: 30px;
+    width: 30px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    border-radius: 50px;
+    /* background-color: rgba(0,0,0,0.4); */
+}
+.left .down .chats .arc .img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.left .down .chats .arc p{
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 17px;
+}
+.left .down .chats .arc .bot{
+    height: 100%;
+    width: 81%;
+    position: absolute;
+    right: 0;
+    border-bottom: var(--seprate);
     top: 0;
 }
-.left .down .chats .archive .bot{
-    border-bottom: var(--borlor) 1px solid;
-    right: 0;
+.left .down .chats .c-list{
+    height: 91.3%;
+    width: 100%;
+    bottom: 0;
     position: absolute;
-    height: 100%;
-    width: 80%;
+    /* background-color: rgba(0,0,0,0.4); */
 }
-.left .down .chats .chat {
-    height: 12%;
+.left .down .chats .c-list .cs{
+    height: 70px;
     width: 100%;
     position: absolute;
-    /* background-color: violet; */
-    top: 8.7%;
+    /* background-color: rgba(0,0,0,0.4); */
+    top: calc(var(--i)*70px);
 }
-.left .down .chats .chat-1{
-    margin-top: 12%;
-    top: calc(var(--i)*12%);
-}
-.left .down .chats .chat .bot{
+.left .down .chats .c-list .cs .bot{
     height: 100%;
-    width: 80%;
-    border-bottom: var(--borlor) 1PX solid;
+    width: 81%;
+    position: absolute;
     right: 0;
-    position: absolute; 
+    border-bottom: var(--seprate);
+    top: 0;
+}
+.left .down .chats .c-list .cs img{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 10%;
+}
+.left .down .chats .c-list .cs .datetime{
+    height: 10px;
+    width: 6%;
+    border-radius: 10px;
+    top: 31%;
+    right: 3%;
+    position: absolute;
+    transform: translate(-0%,-50%);
+    background-color: #fff1;
+}
+.left .down .chats .c-list .cs .name{
+    height: 15px;
+    width: 50%;
+    border-radius: 10px;
+    top: 30%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-0%,-50%);
+    background-color: #fff1;
+}
+.left .down .chats .c-list .cs .dis{
+    height: 15px;
+    width: 70%;
+    border-radius: 10px;
+    top: 70%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-0%,-50%);
+    background-color: #fff1;
 }
 
 
 
-
+.left .arc-area{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(32, 44, 51);
+    position: absolute;
+    transform: translateZ(1px);
+    left: -100%;
+}
+.arc-area-a{
+    animation: arc 0.5 ;
+}
+@keyframes arc {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+.left .arc-area .up{
+    height: 16%;
+    width: 100%;
+    /* background-color: #fff1; */
+    color: white;
+}
+.left .arc-area .up .back{
+    transform: translate(-50%,-50%) translateZ(1px);
+    width: 30px;
+    height: 30px;
+    top: 74%;
+    left: 8.5%;
+    position: absolute;
+    color: white;
+    border-radius: 50%;
+    /* background-color: #fff1; */
+}
+.left .arc-area .up .back img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.left .arc-area .up p{
+    font-size:18px;
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 72%;
+    left: 25%;
+}
+.left .arc-area .c-area{
+    height: 84%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(17, 27, 33);
+}
+.left .arc-area .c-area .c-list{
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    /* background-color: rgba(0,0,0,0.4); */
+}
+.left .arc-area .c-area .c-list .cs{
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    /* background-color: rgba(0,0,0,0.4); */
+    top: calc(var(--i)*70px);
+}
+.left .arc-area .c-area .c-list .cs .bot{
+    height: 100%;
+    width: 81%;
+    position: absolute;
+    right: 0;
+    border-bottom: var(--seprate);
+    top: 0;
+}
+.left .arc-area .c-area .c-list .cs img{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 10%;
+}
+.left .arc-area .c-area .c-list .cs .datetime{
+    height: 10px;
+    width: 6%;
+    border-radius: 10px;
+    top: 31%;
+    right: 3%;
+    position: absolute;
+    transform: translate(-0%,-50%);
+    background-color: #fff1;
+}
+.left .arc-area .c-area .c-list .cs .name{
+    height: 15px;
+    width: 50%;
+    border-radius: 10px;
+    top: 30%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-0%,-50%);
+    background-color: #fff1;
+}
+.left .arc-area .c-area .c-list .cs .dis{
+    height: 15px;
+    width: 70%;
+    border-radius: 10px;
+    top: 70%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-0%,-50%);
+    background-color: #fff1;
+}
 
 
 
