@@ -7,18 +7,31 @@
 :root{
     --borlor:rgb(41, 52, 59);
     --seprate:var(--borlor) 1px solid;
+    --bg:rgb(32, 44, 51);
+    --fg:rgb(17, 27, 33);
+    --border:1px solid white;
+    --middle:translate(-50%,-50%);
 }
 body{
-    background-color: black;
-    /* transform-style: preserve-3d; */
+    background-color: rgb(9, 16, 20);
 }
 
-
+.area-full{
+    width: 1366px;
+    height: 677px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* transform: var(--middle); */
+    box-shadow: rgb(15, 15, 15) 0 0 20px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
 
 .left{
     height: 100%;
     width: 30%;
-    background-color: rgb(32, 44, 51);
+    background-color: var(--bg);
     position: absolute;
     border-right: var(--seprate);
     transform-style: preserve-3d;
@@ -30,22 +43,22 @@ body{
     position: absolute;
 }
 .left .up .ppl{
-    height: 41px;
-    width: 41px;
+    height: 40px;
+    width: 40px;
     position: absolute;
     top: 50%;
     left: 8%;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     border-radius: 50%;
 }
 .left .up .ppl img{
-    height: 41px;
+    height: 40px;
 }
 .left .up p{
     width: fit-content;
     top: 50%;
     left: 22%;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     position: absolute;
     color: rgb(174, 186, 188);
     font-size: 11px;
@@ -53,7 +66,7 @@ body{
 }
 .left .up .status{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 50%;
     left: 67%;
     border-radius: 50%;
@@ -63,13 +76,13 @@ body{
 }
 .left .up .status .statu{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 50%;
     left: 50%;
 }
 .left .up .chat{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 49%;
     left: 79%;
     border-radius: 50%;
@@ -79,13 +92,13 @@ body{
 }
 .left .up .chat .cha{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 50%;
     left: 50%;
 }
 .left .up .opt{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 48%;
     left: 91%;
     border-radius: 50%;
@@ -95,14 +108,14 @@ body{
 }
 .left .up .opt .op{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 50%;
     left: 50%;
 }
 .left .down{
     height: 91.3%;
     width: 100%;
-    background-color: rgb(17, 27, 33);
+    background-color: var(--fg);
     bottom: 0;
     position: absolute;
 }
@@ -115,12 +128,113 @@ body{
 .left .down .search .warea{
     height: 72%;
     width: 93%;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 50%;
     left: 50%;
     position: absolute;
-    background-color: rgb(32, 44, 51);
+    background-color: var(--bg);
     border-radius: 9px;
+}
+.left .down .search .warea .searArea{
+    height: 100%;
+    width: 100%;
+    transform: var(--middle);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 9px;
+}
+.left .down .search .warea ion-icon{
+    height: 20px;
+    width: 20px;
+    color: rgb(109, 124, 132);
+    top: 50%;
+    left: 6%;
+    transform: var(--middle);
+    position: absolute;
+}
+.left .down .search .warea .se{
+    animation: sea 0.5s forwards;
+}
+.left .down .search .warea .seb{
+    animation: seab 0.5s backwards;
+}
+@keyframes sea {
+    0%{
+        color: rgb(109, 124, 132);
+    }
+    100%{
+        color: rgba(109, 124, 132, 0);
+    }
+}
+@keyframes seab {
+    100%{
+        color: rgb(109, 124, 132);
+    }
+    0%{
+        color: rgba(109, 124, 132, 0);
+    }
+}
+.left .down .search .warea .back{
+    color: rgba(0, 168, 132, 0);
+    height: 25px;
+    width: 25px;
+    transform: var(--middle) rotate(-135deg);
+}
+.left .down .search .warea .ba{
+    animation: ba 0.5s forwards;
+}
+.left .down .search .warea .bab{
+    animation: bab 0.5s backwards;
+}
+@keyframes ba {
+    0%{
+        transform: var(--middle) rotate(-135deg);
+        color: rgba(0, 168, 132, 0);
+    }
+    100%{
+        transform: var(--middle);
+        color: rgb(0, 168, 132);
+    }
+}
+@keyframes bab {
+    100%{
+        transform: var(--middle) rotate(-135deg);
+        color: rgba(0, 168, 132, 0);
+    }
+    0%{
+        transform: var(--middle);
+        color: rgb(0, 168, 132);
+    }
+}
+.left .down .search .warea p{
+    transform: translate(0%,-50%);
+    color: rgb(109, 124, 132);
+    width: fit-content;
+    top: 45%;
+    left: 17%;
+    position: absolute;
+    font-size: 14px;
+}
+.left .down .search .warea .te{
+    animation: text 0.5s forwards;
+}
+.left .down .search .warea .teb{
+    animation: textb 0.5s backwards;
+}
+@keyframes text {
+    100%{
+        color: rgba(109, 124, 132, 0);
+    }
+}
+@keyframes textb {
+    100%{
+        color: rgba(109, 124, 132, 0);
+    }
+    0%{
+        color: rgb(109, 124, 132);
+    }
 }
 .left .down .chats{
     height: 92%;
@@ -138,7 +252,7 @@ body{
 .left .down .chats .arc .img{
     height: 30px;
     width: 30px;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     position: absolute;
     top: 50%;
     left: 10%;
@@ -149,14 +263,14 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
 }
 .left .down .chats .arc p{
     position: absolute;
     width: fit-content;
     top: 50%;
     left: 27%;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     color: white;
     font-size: 17px;
 }
@@ -192,7 +306,7 @@ body{
 }
 .left .down .chats .c-list .cs img{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 50%;
     left: 10%;
 }
@@ -226,19 +340,24 @@ body{
     transform: translate(-0%,-50%);
     background-color: #fff1;
 }
-
-
-
+.cs:hover{
+    background-color: var(--bg);
+}
 .left .arc-area{
     height: 100%;
     width: 100%;
-    background-color: rgb(32, 44, 51);
+    background-color: var(--bg);
     position: absolute;
     transform: translateZ(1px);
     left: -100%;
+    /* transition: 1s; */
+    /* animation: arc 0.3s forwards; */
 }
-.arc-area-a{
-    animation: arc 0.5 ;
+.left .arc-area-a{
+    animation: arc 0.2s forwards;
+}
+.left .arc-area-b{
+    animation: arc-b 0.2s forwards;
 }
 @keyframes arc {
     0%{
@@ -248,6 +367,15 @@ body{
         left: 0;
     }
 }
+@keyframes arc-b {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
 .left .arc-area .up{
     height: 16%;
     width: 100%;
@@ -255,7 +383,7 @@ body{
     color: white;
 }
 .left .arc-area .up .back{
-    transform: translate(-50%,-50%) translateZ(1px);
+    transform: var(--middle) translateZ(1px);
     width: 30px;
     height: 30px;
     top: 74%;
@@ -269,13 +397,13 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
 }
 .left .arc-area .up p{
     font-size:18px;
     color: white;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 72%;
     left: 25%;
 }
@@ -284,7 +412,7 @@ body{
     width: 100%;
     bottom: 0;
     position: absolute;
-    background-color: rgb(17, 27, 33);
+    background-color: var(--fg);
 }
 .left .arc-area .c-area .c-list{
     height: 100%;
@@ -310,7 +438,7 @@ body{
 }
 .left .arc-area .c-area .c-list .cs img{
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 50%;
     left: 10%;
 }
@@ -364,13 +492,13 @@ body{
     bottom: 0;
 }
 .right .nochat{
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     position: absolute;
     top: 38%;
     left: 50%;
 }
 .right h1{
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     position: absolute;
     width: fit-content;
     top: 62.5%;
@@ -384,7 +512,7 @@ body{
     font-size: 11px;
     padding: 5px;
     color: rgb(192, 207, 176);
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 63%;
     left: 62%;
     position: absolute;
@@ -401,10 +529,241 @@ body{
 .right h6{
     width: fit-content;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: var(--middle);
     top: 92%;
     left: 50%;
     color: rgb(94, 118, 133);
     font-size: 14px;
     font-weight: 100;
+}
+
+.chat-areas{
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    transform-style: preserve-3d;
+    transform: translateZ(-10px) scale(0);
+    transition: 0.1s;
+}
+.chat-areas-a{
+    transform: translateZ(10px) scale(1);
+    transition: 0.1s;
+}
+.chat-areas .chat-area{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: var(--middle);
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+.chat-areas .chat-area .top{
+    height: 8.72%;
+    width: 100%;
+    background-color: rgb(32, 44, 51);
+    position: absolute;
+}
+.chat-areas .chat-area .top .dp{
+    background-color: #fff1;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+    transform: var(--middle);
+    top: 50%;
+    left: 4%;
+}
+.chat-areas .chat-area .top .dp img{
+    height: 40px;
+    width: 40px;
+}
+.chat-areas .chat-area .top .name{
+    width: 100px;
+    height: 12px;
+    border-radius: 10px;
+    top: 35%;
+    transform: translate(-0%,-50%);
+    left: 7%;
+    background-color: #fff1;
+    position: absolute;
+}
+.chat-areas .chat-area .top .status{
+    top: 65%;
+    height: 10px;
+    width: 70px;
+}
+.chat-areas .chat-area .top .search{
+    height: 30px;
+    width: 30px;
+    /* background-color: #fff1; */
+    border-radius: 50%;    
+    position: absolute;
+    transform: var(--middle);
+    top: 50%;
+    right: 4.5%;
+}
+.chat-areas .chat-area .top .search img{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: var(--middle);
+}
+.chat-areas .chat-area .top .option{
+    right: 0.5%;
+}
+.chat-areas .chat-area .text-area{
+    width: 100%;
+    position: absolute;
+    height: 560px;
+    top: 8.72%;
+    position: absolute;
+    background: url(bg.png);
+}
+.chat-areas .chat-area .text-area .status{
+    height: 30px;
+    width: 60px;
+    background: rgb(24, 34, 41);
+    border-radius: 7px;
+    transform: var(--middle);
+    bottom: 9%;
+    left: 50%;
+    position: absolute;
+}
+.chat-areas .chat-area .text-area .status p{
+    transform: var(--middle);
+    color: rgb(109, 124, 133);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 11.5px;
+    font-weight: 500;
+}
+.chat-areas .chat-area .text-area .not{
+    height: 30px;
+    width: 792px;
+    border-radius: 7px;
+    background: rgb(24, 34, 41);
+    transform: var(--middle);
+    bottom: 1%;
+    left: 50%;
+    position: absolute;
+}
+.chat-areas .chat-area .text-area .not p{
+    color: rgb(240, 193, 113);
+    font-size: 13px;
+    transform: var(--middle);
+    top: 50%;
+    left: 50.8%;
+    position: absolute;
+    width: 760px;
+}
+.chat-areas .chat-area .text-area .not img{
+    transform: var(--middle);
+    top: 48%;
+    position: absolute;
+    left: 1.8%;
+}
+.chat-areas .chat-area .down{
+    height: 9.5%;
+    width: 100%;
+    background-color: var(--bg);
+    bottom: 0;
+    position: absolute;
+}
+.chat-areas .chat-area .down .smile{
+    height: 30px;
+    width: 30px;
+    /* background-color: #fff1; */
+    position: absolute;
+    transform: var(--middle);
+    top: 50%;
+    border-radius: 50%;
+    left: 3.6%;
+}
+.chat-areas .chat-area .down .smile img{
+    transform: var(--middle);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.chat-areas .chat-area .down .attac{
+    left: 8%;
+}
+.chat-areas .chat-area .down input{
+    width: 767px;
+    height: 22px;
+    transform: var(--middle);
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    border-radius: 10px;
+    border: 0px red solid;
+    background-color: rgba(67, 74, 78, 0.37);
+    font-size: 14.5px;
+    color: white;
+    padding: 10px;
+    cursor: text;
+}
+.chat-areas .chat-area .down input:focus{
+    outline: none;
+}
+.chat-areas .chat-area .down ion-icon{
+    color: rgb(92, 110, 119);
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    transform: var(--middle);
+    top: 50%;
+    right: 1%;
+}
+.chat-areas .chat-area .down .send{
+    color: transparent;
+}
+.chat-areas .chat-area .down .sen{
+    animation: sen 0.5s forwards;
+}
+@keyframes sen {
+    0%{
+        color: transparent;
+    }
+    100%{
+        color: rgb(92, 110, 119);
+    }
+}
+.chat-areas .chat-area .down .sen-b{
+    animation: senb 0.5s forwards;
+}
+@keyframes senb {
+    100%{
+        color: transparent;
+    }
+    0%{
+        color: rgb(92, 110, 119);
+    }
+}
+.chat-areas .chat-area .down .mi{
+    animation: mi 0.5s forwards;
+}
+@keyframes mi {
+    0%{
+        color: rgb(92, 110, 119);
+    }
+    100%{
+        color: transparent;
+    }
+}
+.chat-areas .chat-area .down .mi-b{
+    animation: mib 0.5s forwards;
+}
+@keyframes mib {
+    100%{
+        color: rgb(92, 110, 119);
+    }
+    0%{
+        color: transparent;
+    }
 }
